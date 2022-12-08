@@ -29,16 +29,16 @@ section#login {
     position: absolute; /*pra mover a seção#login pro meio*/
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /*metade do section#login vai chegar pra cima metade vai chegar pra esquerda pra ficar no meio junto com o position relaative*/
     overflow: hidden; /*recortar as bordas e tranformar em redondas*/
 
 
     background-color: white;
     width: 270px;
-    height: 535px;
+    height: 520px;
     border-radius: 20px; /*arredondamento das bordaas*/
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 450);
 
+    transform: translate(-50%, -50%); /*metade do section#login vai chegar pra cima metade vai chegar pra esquerda pra ficar no meio junto com o position relaative*/
     transition: width 0.3s, heith 0.3s;
     transition-timing-function: ease; /*suavisada durante a animação quando diminui e almenta a tela*/
 }
@@ -66,10 +66,11 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     display: block; /*não precisava pq a div ja e bloco*/
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px; /*cima em baixo 5 e a da esquerda e direita 0*/
 }
 
@@ -77,12 +78,34 @@ div.campo > label {
     display: none; /*vai tirar o login e a senha*/
 }
 
+div.campo > i {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input { /*as caixas roxas */
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 44.4px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12px); /*subir a caixa pra cima*/
+}
+
+div.campo > input:focus-within { /*quando eu clicar a caixa que estiver com foco fica branco*/
+    background-color: white;
+}
+
 form > input[type=submit] {
     display: block;
     font-size: 1em;
     width: 100%; /*Para o botão ocupar 100% do conteiner = a linha toda*/
     height: 40px;
-    background-color: #49a09d;
+    background-color: #53aaa7;
     color: white;
     border: none;
     border-radius: 5px;
